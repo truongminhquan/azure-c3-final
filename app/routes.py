@@ -87,8 +87,7 @@ def notification():
             # notification.status = 'Notified {} attendees'.format(len(attendees))
             # db.session.commit()
             # TODO Call servicebus queue_client to enqueue notification ID
-            logging.error('========the notification: ' + str(notification.id))
-            msg = Message("someID")
+            msg = Message(str(notification.id))
             
             queue_client.send(msg)
             #################################################
