@@ -45,7 +45,10 @@ def registration():
 
 @app.route('/Attendees')
 def attendees():
-    attendees = Attendee.query.order_by(Attendee.submitted_date).all()
+    try:
+        attendees = Attendee.query.order_by(Attendee.submitted_date).all()
+    except Exception as e:
+        logging.error('Error occured while getting attendees: ' + e)
     return render_template('attendees.html', attendees=attendees)
 
 
