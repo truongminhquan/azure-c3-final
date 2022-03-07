@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'c3-app-service-final'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_10FCBBDC2A954E56B354C1FBF865E462 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A79A987F57274D23B35D82054B43C969 }}
